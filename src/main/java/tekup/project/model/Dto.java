@@ -3,6 +3,7 @@ package tekup.project.model;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 
+
 @Data
 @AllArgsConstructor
 public class Dto {
@@ -12,6 +13,8 @@ public class Dto {
 	private String image;
 	private String marque;
 	private String breifDescription;
-	private String prix;
+	private Integer prix;
 	private String dispo;
+
 }
+

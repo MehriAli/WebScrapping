@@ -1,5 +1,6 @@
 package tekup.project.service;
 
+
 import java.util.List;
 
 import org.openqa.selenium.WebElement;
@@ -11,16 +12,14 @@ import tekup.project.model.Dto;
 
 @Service
 @AllArgsConstructor
-public class ScrappingMytek {
+public class ScrappingTunisianet {
 	private ChromeDriver driver;
 	private List<Dto> laptop;
-
-	private final String URL = "http://127.0.0.1:5000/mytek";
-	private final String URL_Desktop = "http://127.0.0.1:5000/mytekDesktop";
-
+	private final String URL = "http://127.0.0.1:5000/tunisianet";
+	private final String URL_Desktop = "http://127.0.0.1:5000/tunisianetDesktop";
 	
-
-	public List<Dto> scrapeMytek() {
+	
+	public List<Dto> scrapelaptop() {
 		driver.get(URL);
 		WebElement content = driver.findElementByTagName("body");
 		String inf = content.getText();
@@ -51,11 +50,9 @@ public class ScrappingMytek {
 
 		return laptop.subList(0, 12);
 	}
-
 	
 	
-	
-	public List<Dto> scrapeMytekDesktop() {
+	public List<Dto> scrapedesktop() {
 		driver.get(URL_Desktop);
 		WebElement content = driver.findElementByTagName("body");
 		String inf = content.getText();
@@ -86,8 +83,5 @@ public class ScrappingMytek {
 
 		return laptop.subList(0, 12);
 	}
-	
-	
-	
-	
+
 }
