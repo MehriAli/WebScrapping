@@ -1,11 +1,8 @@
 package tekup.project.model;
 
-import lombok.AllArgsConstructor;
 import lombok.Data;
 
-
 @Data
-@AllArgsConstructor
 public class Dto {
 	
 	private Long id;
@@ -15,6 +12,25 @@ public class Dto {
 	private String breifDescription;
 	private Integer prix;
 	private String dispo;
+	private String site;
+	
+	public Dto() {
+		super();
+	}
+
+	
+	public Dto(Long id, String lien, String image, String marque, String breifDescription, Integer prix, String dispo, String site) {
+		super();
+		this.id = id;
+		this.lien = lien;
+		this.image = image;
+		this.marque = marque;
+		this.breifDescription = breifDescription;
+		this.prix = prix;
+		this.dispo = dispo;
+		this.site = site;
+	}
+	
 
 }
 
